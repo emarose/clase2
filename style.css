@@ -1,0 +1,107 @@
+/* RESET */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+:root{
+  --main-clr: rgb(150,20,20);
+}
+
+body{
+  background-color: rgba(0,0,0,0.2);
+  background-blend-mode: overlay;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gridContainer{
+  margin: 0 60px;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  grid-auto-flow: column;
+  text-align: center;
+}
+.card{
+  max-width: 380px;
+  background-color: #fff;
+}
+.cardBody{
+  background-image: url(./bg2.jfif);
+  min-height: 450px;
+  background-position: center 25px;
+  background-size: cover;
+  background-color: white;
+  background-blend-mode: difference;
+  box-shadow: 0 0 8px 2px gray;
+}
+
+.cardImgWrap{
+  background-color: var(--main-clr);
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+.cardImg{
+  padding: 10px;
+  width: 100%;
+  border-radius: 1vw;
+}
+
+hr{
+  border: 1px solid var(--main-clr);
+  border-radius: 5px;
+  margin: 15px 30px;
+}
+
+.cardTitle{
+  color:#fff;
+  margin: 0 30px;
+  padding: 0 10px 15px 0;
+
+}
+.cardText{
+  font-style: italic;
+  color:#fff;
+  font-size: 1.4rem;
+  padding: 10px 0;
+  text-shadow: 0 0 6px var(--main-clr);
+ 
+}
+.cardPrice{
+  color:#fff;
+  font-size: larger;
+}
+
+.cardBtn{
+  font-size: larger;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: var(--main-clr);
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s all;
+
+}
+
+.cardBtn:hover{
+  cursor: pointer;
+  background-color: rgba(0,0,0);
+  color:#fff;
+  outline: 1px solid var(--main-clr);
+}
+
+@media screen and (max-width: 900px) {
+  .gridContainer{
+    grid-template-columns: auto;
+ 
+    grid-auto-flow: row;
+  }
+}
+
