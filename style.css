@@ -17,23 +17,26 @@ body{
   background-size: cover;
   background-position: center;
 }
+
 .gridContainer{
   margin: 0 60px;
   display: grid;
   min-height: 100vh;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  grid-auto-flow: column;
   text-align: center;
 }
+
 .card{
+  border-radius: 7px;
   max-width: 380px;
   background-color: #fff;
 }
+
 .cardBody{
+  min-width: 350px;
+  border-radius: 7px;
   background-image: url(./bg2.jfif);
   min-height: 450px;
   background-position: center 25px;
@@ -41,6 +44,10 @@ body{
   background-color: white;
   background-blend-mode: difference;
   box-shadow: 0 0 8px 2px gray;
+}
+
+.cardBody:hover{
+  box-shadow: 0 0 5px 5px rgba(255,255,255,0.2);
 }
 
 .cardImgWrap{
@@ -86,7 +93,7 @@ hr{
   background-color: var(--main-clr);
   border: none;
   border-radius: 10px;
-  transition: 0.3s all;
+  transition: background-color .5s ;
 
 }
 
@@ -97,11 +104,9 @@ hr{
   outline: 1px solid var(--main-clr);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 1000px) {
   .gridContainer{
-    grid-template-columns: auto;
- 
-    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
